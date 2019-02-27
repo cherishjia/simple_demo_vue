@@ -37,7 +37,7 @@
                 </div>
                 <div class="card-main">
                     <div class="card-case-source" id="case_source" >
-                        <div class="svgDom chuban-svgDom" v-for="(item,index) in sourceList">
+                        <div class="svgDom chuban-svgDom" v-for="(item,index) in sourceList" v-bind:key="index">
                             <div class="svgBox svgBox_wtsb" id="svgBox_wtsb">
                                 <svgRing :options="{size:'110',percent:item.percent,
                                     strokeWidth:14,

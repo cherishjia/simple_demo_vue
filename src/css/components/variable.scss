@@ -1,0 +1,11 @@
+@mixin inline($type:middle){
+  display:inline-block;
+  vertical-align: $type;
+}
+
+@mixin flex-box($justify,$align,$wrap:no-wrap){
+  display:flex;
+  justify-content: $justify;
+  align-items:$align;
+  flex-wrap:$wrap;
+}

@@ -37,7 +37,6 @@
         mounted(){
             let that = this;
             // that.runAnimate(that.options.percent, that.$refs.donut);
-            console.log('ccc',that.$refs);
             setInterval(function(){
                 that.runAnimate(that.options.percent, that.$refs.donut);
             },5000)
@@ -49,16 +48,16 @@
                     percent = 0.1;
                 }
 
-                var totalTime = 3;
-                var $circleAnimate = $(dom).find('#circleAnimate');
-                var $tailAnimate = $(dom).find('#tailAnimate');
-                var per = percent/100;
-                var durTime = totalTime * per;
+                let totalTime = 3;
+                let $circleAnimate = $(dom).find('#circleAnimate');
+                let $tailAnimate = $(dom).find('#tailAnimate');
+                let per = percent/100;
+                let durTime = totalTime * per;
 
-                $circleAnimate[0].setAttribute('repeatDur', durTime + 's');
-                $tailAnimate[0].setAttribute('repeatDur', durTime + 's');
+                $circleAnimate.attr('repeatDur', durTime + 's');
+                $tailAnimate.attr('repeatDur', durTime + 's');
                 $circleAnimate[0].beginElement();
-                $tailAnimate[0].beginElement();
+                // $tailAnimate[0].beginElement();
             }
         }
     }
